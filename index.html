@@ -4,91 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .wrapper{
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-        }
-
-        
-        .container{
-            width: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .heroSlider{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 40px;
-            background-image: url("src/img/slide-1.webp");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 600px;
-            border-radius: 60px;
-        }
-
-        .sliderElements{
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            justify-content: center;
-            gap:40px;
-            padding-left: 60px;
-        }
-
-
-        .titleSlider{
-            color: white;
-            font-size: 55px;
-        }
-
-        .btnSlider{
-            display: flex;
-            align-items: center;
-        }
-
-        .btnContent{
-            padding: 15px 25px;
-            font-size: 21px;
-            border-radius: 40px;
-            background-color: aliceblue;
-        }
-
-        .btnContent::after{
-            display: inline-block;
-
-
-        }
-
-        .btnSlider:link{
-            color: black;
-            text-decoration: none;
-        }
-
-        .preTitleSlider{
-            color: white;
-            text-transform: uppercase;
-
-        }
-
-    </style>
-
     <link rel="stylesheet" href="src/style.css">
-<script src="https://kit.fontawesome.com/4a521abdbf.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/4a521abdbf.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -96,7 +13,8 @@
         <header class="cabecera">
 
             <div class="divMarca">
-                <h1 class="nombreMarca">ecomus</h1>
+                <!--<h1 class="nombreMarca">ecomus</h1>-->
+                <img src="src/img/logo.svg" alt="Logo web">
             </div>
     
             <div class="divMenu">
@@ -126,8 +44,6 @@
                     <i class="fa-regular fa-heart"></i>
                 </a>
             </div>
-            
-    
         </header>
         
     
@@ -135,9 +51,9 @@
             <div class="heroSlider">
                 <div class="sliderElements">
                     <p class="preTitleSlider">Diseño icónico y acústica brillante</p>
-                    <h2 class="titleSlider">Auriculares inalámbricos <br> Ecomus</h2>
+                    <h2 class="titleSlider">Auriculares <br> inalámbricos Ecomus</h2>
                     <a class="btnSlider" href="#"><span class="btnContent">
-                        Compra la colección
+                        Explorar colección
                         <svg class="hdt-icon hdt-icon-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 64 64" fill="currentColor"><path d="M12,56.43,36.48,32,12,7.52,19.53,0,51.61,32,19.53,64Z"></path></svg>
                     </span></a>
                 </div>
