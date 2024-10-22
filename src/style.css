@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 500;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+}
+
+.divMarca {
+    width: 25%;
+    text-align: left;
+}
+
+.divMenu {
+    width: 50%;
+    text-align: center;
+}
+
+.divBotones {
+    width: 25%;
+    text-align: right;
+}
+
+.nombreMarca {
+    margin-left: 40px;
+}
+
+li {
+    display: inline;
+    padding: 0.5em;
+    list-style: none;
+}
+
+.categorias {
+    text-decoration: none;
+    color: black;
+}
+
+.categorias:hover {
+    text-decoration: underline;
+}
+
+.botonBusqueda, .botonUser, .botonLike, .botonCesta {
+    text-decoration: none;
+    color: black;
+}
