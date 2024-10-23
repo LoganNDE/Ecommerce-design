@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper{
-    width: 100vw;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,16 +25,13 @@ body {
 
 
 .heroSlider{
+    margin-top: 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 25px;
-    background-image: url("/src/img/slide-1.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    border-radius: 60px;
+    position: relative;
 }
 
 .sliderElements{
@@ -44,6 +41,14 @@ body {
     justify-content: center;
     gap:40px;
     padding-left: 60px;
+    left: 0px;
+    position: absolute;
+    z-index: 1;
+}
+
+.imgSlider{
+    border-radius: 60px;
+    width: 100%;
 }
 
 
@@ -121,4 +126,30 @@ li {
 .botonBusqueda, .botonUser, .botonLike, .botonCesta {
     text-decoration: none;
     color: black;
+}
+
+
+.category{
+    margin:45px 0px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F6F6;
+    padding: 35px 0px;
+    border-radius: 20px;
+}
+
+.grid h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
 }
