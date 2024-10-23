@@ -54,7 +54,7 @@ body {
 
 .titleSlider {
     color: white;
-    font-size: 55px;
+    font-size: min(calc(16px + 2vw), 55px);
 }
 
 .btnSlider {
@@ -63,11 +63,13 @@ body {
 }
 
 .btnContent {
-    padding: 16px 20px;
-    font-size: 19px;
-    border-radius: 40px;
-    background-color: aliceblue;
+    padding: 13px 23px;
+    font-size: 15px;
+    border-radius: 6rem;
+    background-color: white;
     color: black;
+    position: relative;
+    top: -16px;
 }
 
 .btnContent::after {
@@ -82,10 +84,12 @@ body {
 .preTitleSlider {
     color: white;
     text-transform: uppercase;
-
+    font-size: 13px;
+    position: relative;
+    top: 20px;
 }
 
-.cabecera {
+.cabecera-1 {
     position: fixed;
     z-index: 3;
     background-color: white;
@@ -95,7 +99,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    height: 10vh;
+    height: 8vh;
 }
 
 .divMarca {
@@ -145,19 +149,12 @@ li:hover > .categorias::before {
     content: "";
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 1px;
     bottom: -5px;
     left: 0;
     background-color: black;
     transition: width 0.3s ease;
 }
-
-
-.botonBusqueda, .botonUser, .botonLike, .botonCesta {
-    text-decoration: none;
-    color: black;
-}
-
 
 .category{
     margin:45px 0px;
@@ -204,12 +201,110 @@ li:hover > .categorias::before {
 
 @media (min-width: 1150px) {
 
+    .cabecera-2 {
+        display: none;
+    }
 }
 
-@media (max-width: 11490px) {
+@media (max-width: 1149px) {
+
+    .cabecera-1 {
+        display: none;
+    }
+
+    .cabecera-2 {
+        position: fixed;
+        z-index: 3;
+        background-color: white;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 8vh;
+    }
+
+    .divMenu-2 {
+        width: 25%;
+        display: flex;
+    }
+
+    .bar {
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+    }
+
+    .divMarca-2 {
+        justify-content: center;
+        width: 50%;
+        display: flex;
+    }
 
     .heroSlider {
         border-radius: 30px;
     }
+
+    .divMenu {
+        display: none;
+    }
+
+    .category {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-5, .category-6 {
+        display: none;
+    }
+
 }
 
+@media (max-width: 767px) {
+
+    .divMenu-2 {
+        width: 25%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .bar {
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+    }
+
+    .divMarca-2 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-3, .category-4, .category-5, .category-6 {
+        display: none;
+    }
+
+    .boton-2, .boton-3 {
+        display: none;
+    }
+
+    .divBotones {
+        gap: 3px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .imgSlider {
+        border-radius: 0px;
+    }
+
+    .preTitleSlider {
+        top: 29px;
+    }
+}
