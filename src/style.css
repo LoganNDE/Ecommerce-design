@@ -5,13 +5,13 @@ body {
     font-weight: 500;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.wrapper{
+.wrapper {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -19,12 +19,12 @@ body {
 }
 
 
-.container{
+.container {
     width: 90%;
 }
 
 
-.heroSlider{
+.heroSlider {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body {
     border-radius: 60px;
 }
 
-.sliderElements{
+.sliderElements {
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -47,33 +47,33 @@ body {
 }
 
 
-.titleSlider{
+.titleSlider {
     color: white;
     font-size: 55px;
 }
 
-.btnSlider{
+.btnSlider {
     display: flex;
     align-items: center;
 }
 
-.btnContent{
+.btnContent {
     padding: 16px 20px;
     font-size: 19px;
     border-radius: 40px;
     background-color: aliceblue;
 }
 
-.btnContent::after{
+.btnContent::after {
     display: inline-block;
 }
 
-.btnSlider:link{
+.btnSlider:link {
     color: black;
     text-decoration: none;
 }
 
-.preTitleSlider{
+.preTitleSlider {
     color: white;
     text-transform: uppercase;
 
@@ -99,26 +99,81 @@ body {
 }
 
 .divBotones {
+    display: flex;
+    justify-content: end;
     width: 25%;
-    text-align: right;
+    gap: 18px;
+}
+
+.boton {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
 }
 
 li {
-    display: inline;
-    padding: 0.5em;
+    position: relative;
+    display: inline-flex;
+    padding: 10px;
     list-style: none;
 }
 
-.categorias {
-    text-decoration: none;
-    color: black;
+li:hover > .categorias::before {
+    width: 100%;
 }
 
-.categorias:hover {
-    text-decoration: underline;
+.categorias {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
 }
+
+.categorias::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
 
 .botonBusqueda, .botonUser, .botonLike, .botonCesta {
     text-decoration: none;
     color: black;
 }
+
+.numBoton {
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    top: -8px;
+    right: -7px;
+    border-radius: 40px;
+    background-color: black;
+    font-size: 10px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1150px) {
+
+}
+
+@media (max-width: 11490px) {
+
+    .heroSlider {
+        border-radius: 30px;
+    }
+}
+
