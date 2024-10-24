@@ -162,7 +162,7 @@ body {
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 30px
+    gap: 30px;
 }
 
 .grid-category{
@@ -318,15 +318,96 @@ body {
     background-color: #BEA36E;
 }
 
-
-
-
-
 .imgFtrdProduct{
     width: 100%;
 }
 
+.sectionBSellers {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
 
+.divBSellers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.bestSellers{
+    position: relative;
+    height: auto;
+    background-color: white;
+    width: 60%;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.productos a {
+    text-decoration: none;
+    font-size: 11px;
+    margin: 20px;
+}
+
+.productos a:hover {
+    color: orangered;
+}
+
+.productos img {
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.precioTachado {
+    text-decoration: line-through;
+    font-size: 11px;
+    position: relative;
+    color: rgb(119, 119, 119);
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+.nuevoPrecio {
+    margin-left: 10px;
+    position: absolute;
+    color: rgb(184, 1, 1);
+}
+
+.precio {
+    margin-top: 6px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 35px;
+}
+
+.containerBSellers {
+    padding: 20px;
+    background-color: #F6F6F6;
+    border-radius: 55px;
+    justify-content: center;
+}
+
+.titleBSeller {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 40px;
+}
+
+.tagBSeller {
+    position: absolute;
+    background-color: #FC5732;
+    color: white;
+    padding: 5px 7px;
+    font-size: 12px;
+    border-radius: 30px;
+    right: 20px;
+    top: 20px;
+}
 
 
 /* MEDIA QUERIES */
@@ -416,6 +497,8 @@ body {
     .category-5, .category-6 {
         display: none;
     }
+
+
 
 }
 
