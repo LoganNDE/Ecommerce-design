@@ -63,8 +63,8 @@ body {
 }
 
 .btnContent {
-    padding: max(11px, calc(1px + 0.5vw)) max(17px, calc(12px + 0.5vh));
-    font-size: min(16px, calc(11px + 0.5vw));
+    padding: 11px 17px;
+    font-size: min(16px, calc(0.5vw + 10px));
     border-radius: 6rem;
     background-color: white;
     color: black;
@@ -126,14 +126,14 @@ body {
     font-size: 19px;
 }
 
-li {
+.menu li {
     position: relative;
     display: inline-flex;
     padding: 10px;
     list-style: none;
 }
 
-li:hover > .categorias::before {
+.menu li:hover > .categorias::before {
     width: 100%;
 }
 
@@ -157,7 +157,7 @@ li:hover > .categorias::before {
 }
 
 .category{
-    margin:45px 0px;
+    margin-top:45px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
@@ -165,7 +165,7 @@ li:hover > .categorias::before {
     gap: 30px
 }
 
-.grid{
+.grid-category{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,7 +174,7 @@ li:hover > .categorias::before {
     border-radius: 20px;
 }
 
-.grid h3{
+.grid-category h3{
     font-size: 16px;
     font-weight: 600;
     margin-top: 15px;
@@ -197,6 +197,138 @@ li:hover > .categorias::before {
 }
 
 
+.containerFtrd{
+    display: flex;
+    justify-content: center;
+
+}
+
+.featuredProducts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin-top: 45px;
+}
+
+
+.gridFtrdProducts{
+    border-radius: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.gridFtrdProducts > *{
+    margin: 10px 0px;
+}
+
+.gridFtrdProducts ul > *{
+    font-size: 15px;
+    list-style: none;
+    margin: 25px 0px;
+    display: flex; /* Alinea el ícono y el texto horizontalmente */
+    align-items: center;
+}
+
+.listFtrdProduct li svg {
+    flex-shrink: 0; /* Evita que el SVG se encoja */
+    margin-right: 10px;
+    width: 12px;
+    height: 10px;
+}
+
+.gridFtrdProducts ul > *::before{
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px;
+    height: 10px;
+}
+
+.dividerFtrdProduct{
+    border: none;
+    background-color: #EBEBEB;
+    height: 1px;
+}
+
+.ftrdProduct-2 .dividerFtrdProduct{
+    border: none;
+    background-color: #333333;
+    height: 1px;
+}
+
+
+.ftrdProduct-1, .ftrdProduct-3{
+    background-color: #F6F6F6;
+    color: #747474;
+}
+
+.ftrdProduct-2{
+    background-color: #141414;
+    color: white;
+}
+
+.containerBtnFtrd{
+    display: flex;
+    justify-content: center;
+}
+
+.ftrdProduct-1 a, .ftrdProduct-3 a{
+    color: white;
+    padding: 13px 30px;
+    border-radius: 25px;
+    background-color: #141414;
+}
+
+
+.ftrdProduct-2 a{
+    color: black;
+    padding: 13px 30px;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+}
+
+.ftrdProduct-1 a, .ftrdProduct-2 a, .ftrdProduct-3 a:link{
+    text-decoration: none;
+}
+
+
+.ftrdProduct-1 a, .ftrdProduct-2 a, .ftrdProduct-3 a:visited{
+    text-decoration: none;
+}
+
+.tagFtrdProduct{
+    color: white;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    right: 20px;
+    padding: 8px 14px;
+    border-radius: 25px;
+}
+
+.ftrdProduct-1 .tagFtrdProduct{
+    background-color: #FF3232;
+}
+
+.ftrdProduct-2 .tagFtrdProduct{
+    background-color: #44AD55;
+}
+
+.ftrdProduct-3 .tagFtrdProduct{
+    background-color: #BEA36E;
+}
+
+
+
+
+
+.imgFtrdProduct{
+    width: 100%;
+}
+
+
+
+
 /* MEDIA QUERIES */
 
 @media (min-width: 1150px) {
@@ -212,6 +344,16 @@ li:hover > .categorias::before {
         display: none;
     }
 
+    .filterBack{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.459);
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        cursor: url("/src/img/cursor-close.svg"), auto;
+    }
+
     .cabecera-2 {
         position: fixed;
         z-index: 3;
@@ -223,6 +365,23 @@ li:hover > .categorias::before {
         justify-content: space-between;
         width: 90%;
         height: 8vh;
+    }
+
+    .menuMobile{
+        width: 350px;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .btnCloseMenuMobile{
+        position: absolute;
+        font-size: 24px;
+        top: 20px;
+        left: 50px;
     }
 
     .divMenu-2 {
@@ -261,6 +420,11 @@ li:hover > .categorias::before {
 }
 
 @media (max-width: 767px) {
+
+    .cabecera-2{
+        width: 100%;
+        padding: 0px 30px;
+    }
 
     .divMenu-2 {
         width: 25%;
@@ -306,5 +470,9 @@ li:hover > .categorias::before {
 
     .preTitleSlider {
         top: 31px;
+    }
+
+    .featuredProducts{
+        grid-template-columns: 1fr;
     }
 }
