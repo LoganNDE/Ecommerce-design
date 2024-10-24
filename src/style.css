@@ -318,16 +318,113 @@ body {
     background-color: #BEA36E;
 }
 
-
-
-
-
 .imgFtrdProduct{
     width: 100%;
 }
 
+.containerFooter{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
 
 
+.footer{
+    display: grid;
+    position: relative;
+    bottom: 0;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    padding: 60px 0px;
+}
+
+.footerGrid h4{
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.footerGrid >*{
+    padding: 0px 20px;
+    margin: 20px 0px;
+}
+
+.footerGrid ul >*{
+    margin: 20px 0px;
+    list-style: none;
+    font-weight: 400;
+    color: #5C5C5C;
+}
+
+.footerGrid ul >*:hover{
+    color: #DE282B;
+    cursor: pointer;
+}
+
+.footerGrid p {
+    font-weight: 400;
+    color:  #5C5C5C;
+}
+
+
+.footerGrid p span{
+    font-weight: 600;
+    color: #545454;
+}
+
+.inputNewsletter{
+    position: relative;
+}
+
+.emailInput {
+    padding: 10px 145px 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    height: 55px;
+    width: 365px;
+    border: 1px solid #e6e6e6;
+    color: #5C5C5C;
+}
+
+.btnNewsletter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px ;
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 30px;
+    position: absolute;
+    top: 7.5px;
+    right: 30px;
+}
+
+.btnNewsletter:link{
+    color: white;
+    text-decoration: none;
+}
+
+.btnNewsletter:visited{
+    color: white;
+}
+
+.optionsFooter{
+
+    display: flex;
+    gap: 30px;
+}
+
+.optionsFooter span{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.optionsFooter span img{
+    width: 16px;
+    height: 16px;
+}
 
 /* MEDIA QUERIES */
 
@@ -417,6 +514,9 @@ body {
         display: none;
     }
 
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 767px) {
@@ -475,4 +575,11 @@ body {
     .featuredProducts{
         grid-template-columns: 1fr;
     }
+
+    .footer{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+
 }
