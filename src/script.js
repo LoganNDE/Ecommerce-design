@@ -13,48 +13,37 @@ let menuDesplegado = false
 
 
 btnMenuMobile.addEventListener("click", () =>{
-        let menuMobile = document.createElement("nav");
-        body.appendChild(menuMobile);
-        menuMobile.classList.add("menuMobile");
-
-        //Btn 
-        let btnCerrar = document.createElement("div");
-        btnCerrar.classList.add("btnCloseMenuMobile");
-
-        let btn = document.createElement("a");
-        btn.classList.add("btnMenuDesplegado");
-        btnCerrar.appendChild(btn);
-       
-        let contenido = document.createElement("i");
-        contenido.classList.add("fa-solid");
-        contenido.classList.add("fa-xmark");
-
-        btn.appendChild(contenido);
-        menuMobile.appendChild(btnCerrar);
         menuDesplegado = true
+       
+        divNavMobile = document.querySelector(".containerMenu-2")
+        backgroundMenu = document.querySelector(".filterBack")
+        btnCloseMenu = document.querySelector(".btnCloseMenu")
+        navMobile = document.querySelector(".navMenu-2")
+        
 
-        let filterBack = document.createElement("div");
-        filterBack.classList.add("filterBack");
-        body.appendChild(filterBack);
+        navMobile.classList.remove("hiddenContent")
+        divNavMobile.style.width = "350px"
+        backgroundMenu.classList.remove("hiddenContent")
+
+
 
         //Cerrar Menu
-        btn.addEventListener("click", closeBtnMenu);
-        filterBack.addEventListener("click", closeBtnMenu);   
-
+        btnCloseMenu.addEventListener("click", closeBtnMenu);
+        backgroundMenu.addEventListener("click", closeBtnMenu);   
     })
 
 
-
     let closeBtnMenu = (event) => {
-        let menuMobile = document.querySelector(".menuMobile")
+        console.log("Hola")
+        let divNavMobile = document.querySelector(".containerMenu-2")
         let filterBack = document.querySelector(".filterBack")
+        navMobile = document.querySelector(".navMenu-2")
 
-        menuMobile.classList.remove("menuMobile");
-        menuMobile.remove();
+        divNavMobile.style.width = "0px"
+        navMobile.classList.add("hiddenContent")
         menuDesplegado = false;
 
-        filterBack.classList.remove("filterBack");
-        filterBack.remove();
+        filterBack.classList.add("hiddenContent");
     }
 
 

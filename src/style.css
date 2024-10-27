@@ -331,18 +331,18 @@ body {
 
 .divBSellers {
     display: grid;
+    gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    padding: 0px 20px;
 }
 
 .bestSellers{
     position: relative;
     height: auto;
     background-color: white;
-    width: 60%;
     border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
 }
 
 .productos a {
@@ -387,7 +387,7 @@ body {
 .containerBSellers {
     padding: 20px;
     background-color: #F6F6F6;
-    border-radius: 55px;
+    border-radius: 25px;
     justify-content: center;
 }
 
@@ -512,11 +512,19 @@ body {
     height: 16px;
 }
 
+.hiddenContent{
+    display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 1150px) {
 
     .cabecera-2 {
+        display: none;
+    }
+
+    .containerMenu-2{
         display: none;
     }
 }
@@ -532,44 +540,95 @@ body {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.459);
         position: fixed;
-        z-index: 5;
+        z-index: 15;
         top: 0;
+        left: 0;
         cursor: url("/src/img/cursor-close.svg"), auto;
     }
 
     .cabecera-2 {
         position: fixed;
-        z-index: 3;
         background-color: white;
         top: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         height: 8vh;
+        z-index: 5;
+        padding: 0px 30px;
     }
 
-    .menuMobile{
-        width: 350px;
-        height: 100vh;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
+    .divBSellers {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .btnCloseMenuMobile{
-        position: absolute;
+    .btnCloseMenu{
         font-size: 24px;
-        top: 20px;
-        left: 50px;
+    }
+
+    .navMenuContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        height: 100%;
+    }
+
+    .navMenuContainer ul{
+        margin-top: 40px;
+    }
+
+    .navMenuContainer ul li{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        font-size: 18px;
+        padding: 1px 0px;
+        border-bottom: 1px solid rgba(223, 223, 223, 0.63);
+        margin-top: 10px;
+    }
+
+    .moreInformation{
+        padding: 5px 13px;
+        border-left: 1px solid rgba(223, 223, 223, 0.63);
+        cursor: pointer;
+    }
+
+    .ContainerbtnMenu{
+        margin-top: 30px;
+    }
+
+    .bntMenu{
+        align-items: center;
+        padding: 10px 15px;
+        background-color: black;
+        border-radius: 30px;
+    }
+
+    .bntMenu:link{
+        color: white;
+        text-decoration: none;
+    }
+
+    .bntMenu:visited{
+        color: white;
     }
 
     .divMenu-2 {
         width: 25%;
         display: flex;
+    }
+
+    .containerMenu-2{
+        width: 0px;
+        z-index: 20;
+        background-color: #ffffff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        transition: width 0.3s;
     }
 
     .bar {
@@ -600,12 +659,21 @@ body {
         display: none;
     }
 
+
+    .featuredProducts{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .footer{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 767px) {
+
+    .cabecera-1 {
+        display: none;
+    }
 
     .cabecera-2{
         width: 100%;
@@ -631,6 +699,7 @@ body {
     }
     
     .category {
+        padding: 0px 80px;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -666,6 +735,30 @@ body {
         grid-template-columns: 1fr;
         width: 100%;
     }
+
+    .divBSellers {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionBSellers{
+        padding: 80px;
+    }
     
 
+}
+
+@media (max-width: 600px) {
+    
+    .category-2 {
+        display: none;
+    }
+
+    .sectionBSellers{
+        padding: 20px;
+    }
+    
+    .category {
+        padding: 0px 80px;
+        grid-template-columns: 1fr;
+    }
 }
