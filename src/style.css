@@ -156,8 +156,19 @@ body {
     transition: width 0.3s ease;
 }
 
-.category{
-    margin-top:45px;
+.container-carrusel {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.carrusel {
+    display: grid;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.category {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
@@ -172,6 +183,10 @@ body {
     background-color: #F6F6F6;
     padding: 35px 0px;
     border-radius: 20px;
+}
+
+.atras, .delante {
+    display: none;
 }
 
 .grid-category h3{
@@ -531,6 +546,36 @@ body {
 
 @media (max-width: 1149px) {
 
+    .category {
+        padding: 0px 30px;
+    }
+
+    .atras, .delante {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #eeeeee;
+        border-radius: 40px;
+        padding: 10px;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+    }
+
+    .atras {
+        left: -30px;
+    }
+
+    .delante {
+        right: -30px;
+    }
+
+    .atras img, .delante img {
+        width: 20px;
+        height: 20px;
+    }
+
     .cabecera-1 {
         display: none;
     }
@@ -669,7 +714,34 @@ body {
     }
 }
 
+@media (max-width: 999px) and (min-width: 766px) {
+    
+    .category {
+        padding: 0 19px;
+    }
+
+    .atras {
+        left: -30px;
+    }
+
+    .delante {
+        right: -30px;
+    }
+}
+
 @media (max-width: 767px) {
+
+    .category {
+        padding: 0 20px;
+    }
+
+    .atras {
+        left: 20px;
+    }
+
+    .delante {
+        right: 20px;
+    }
 
     .cabecera-1 {
         display: none;
